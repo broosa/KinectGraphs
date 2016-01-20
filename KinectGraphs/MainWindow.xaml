@@ -1,0 +1,17 @@
+﻿<Window x:Class="KinectGraphs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KinectGraphs"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="377.971" Width="525">
+    <Grid Margin="0,0,0,2">
+        <Canvas x:Name="PlotDisplayArea" Margin="10,10,10,13" Grid.Row="1"/>
+        <Label x:Name="kinectStatusLabel" Content="Text" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="sensorValueLabel" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,36,0,0" ContentStringFormat=""/>
+        <oxy:PlotView x:Name="KinectDataPlot" Model="{Binding KinectDataModel}"></oxy:PlotView>
+
+    </Grid>
+</Window>
