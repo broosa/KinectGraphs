@@ -177,36 +177,4 @@ namespace KinectGraphs
 
     }
 
-    public partial class GraphDisplayCanvas : Canvas
-    {
-
-        private List<KeyValuePair<DateTime, double>> graphValues;
-        private double displayTime;
-
-        public GraphDisplayCanvas()
-        {
-            graphValues = new List<KeyValuePair<DateTime, double>>();
-            displayTime = 60L;
-        }
-
-        protected void OnRender(RenderingEventArgs e)
-        {
-
-        }
-
-        public void PushValue(double value, DateTime tstamp)
-        {
-            if (tstamp == null)
-            {
-                tstamp = DateTime.Now;
-            }
-
-            graphValues.Add(new KeyValuePair<DateTime, double>(tstamp, value));
-
-
-        }
-
-
-    }
-
 }
